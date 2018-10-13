@@ -1,0 +1,25 @@
+{
+  "name": "js-pokemon-search-practice-assignment-houston-web-082718",
+  "version": "1.0.0",
+  "description": "![pikachu](https://media.giphy.com/media/uLnPIWsqIz2aA/giphy.gif)",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.2.0",
+    "promise": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkbold-git/js-pokemon-search-practice-assignment-houston-web-082718.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sparkbold-git/js-pokemon-search-practice-assignment-houston-web-082718/issues"
+  },
+  "homepage": "https://github.com/sparkbold-git/js-pokemon-search-practice-assignment-houston-web-082718#readme"
+}
