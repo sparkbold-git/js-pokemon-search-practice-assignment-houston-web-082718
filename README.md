@@ -1,6 +1,6 @@
 # JS Pokemon Search Assignment
 
-[LINK TO my solution!](https://sparkbold-git.github.io/js-pokemon-search-practice-assignment-houston-web-082718/index.html)
+## [LINK TO MY SOLUTION!](https://sparkbold-git.github.io/js-pokemon-search-practice-assignment-houston-web-082718/index.html)
 
 ![pikachu](https://media.giphy.com/media/uLnPIWsqIz2aA/giphy.gif)
 
