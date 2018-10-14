@@ -67,7 +67,7 @@ const flipFunc = (id) => {
 
 const searchPokemon = () => {
   document.getElementById('pokemon-search-form').addEventListener('input', event => {
-    const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(event.target.value.lowerCase()));
+    const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(event.target.value.toLowerCase()));
     render(filterPokemons);
   })
 }
