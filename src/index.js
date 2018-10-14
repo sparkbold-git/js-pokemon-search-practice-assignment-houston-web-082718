@@ -25,10 +25,10 @@ const render = (pokemon) => {
 }
 
 const fetchInitialPokemon = () => {
-  fetch('http://localhost:3000/pokemon/')
+  fetch('db.json')
     .then(resp => resp.json())
     .then(data => {
-      pokemons = data;// json return a hash with key pokemon from json file instead of array! remove this line and change data to pokemons with api from http://localhost:3000/pokemon/
+      pokemons = data.pokemon;// json return a hash with key pokemon from json file instead of array! remove this line and change data to pokemons with api from http://localhost:3000/pokemon/
       document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
       pokemons.forEach(pokemon => {
         render(pokemon);
