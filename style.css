@@ -22,9 +22,10 @@ body {
   color: #2d72fc;
 }
 
-#pokemon-logo {
+#pokemon-logo img {
   width: 300px;
-  margin-left: 330px;
+  text-align: center;
+  margin-left: 33%;
 }
 
 input:focus {
