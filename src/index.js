@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // console.log(POKEMON)
   //YOUR CODE HERE
    fetchInitialPokemon();
-
+   searchPokemon();
 })
 
 // CSS hover flip
@@ -63,4 +63,11 @@ const flipFunc = (id) => {
   } else {
     inner[0].style.transform = 'rotateY(0deg)';
   }
+}
+
+const searchPokemon = () => {
+  document.getElementById('pokemon-search-form').addEventListener('input', event => {
+    const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(event.target.value.lowerCase()));
+    render(filterPokemons);
+  })
 }
