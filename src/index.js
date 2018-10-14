@@ -45,12 +45,12 @@ const render = (pokemon) => {
 
 const fetchInitialPokemon = () => {
   fetch('db.json')
-    // .then(resp => resp.json())
+    .then(resp => resp.json())
     .then(data => {
       pokemons = data;
-      document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
-      pokemons.forEach(pokemon => {
-        render(pokemon);
+      // document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
+      // pokemons.forEach(pokemon => {
+      //   render(pokemon);
       })
     })
 }
