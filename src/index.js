@@ -52,7 +52,7 @@ const searchPokemon = () => {
     const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(keyword));
     let container = document.getElementById('pokemon-container');
     if (filterPokemons.length) {
-      document.getElementById("p1").innerHTML = `Yay! Hera are <strong>${filterPokemons.length}</strong> Pokémon here with keyword <strong><em>'${keyword}'</em>'</strong>`;
+      document.getElementById("p1").innerHTML = `Yay! Hera are <strong>${filterPokemons.length}</strong> Pokémon name with keyword <strong><em>'${keyword}'</em>'</strong>`;
       container.innerHTML = "";
       filterPokemons.forEach(pokemon => render(pokemon))
     } else {
