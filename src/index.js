@@ -48,10 +48,10 @@ const fetchInitialPokemon = () => {
     .then(resp => resp.json())
     .then(data => {
       pokemons = data.pokemon;
-      // document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
-      // pokemons.forEach(pokemon => {
-      //   render(pokemon);
-      // })
+      document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
+      pokemons.forEach(pokemon => {
+        render(pokemon);
+      })
     })
 }
 
