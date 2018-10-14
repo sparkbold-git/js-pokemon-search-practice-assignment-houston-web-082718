@@ -70,7 +70,7 @@ const searchPokemon = () => {
     const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(event.target.value.toLowerCase()));
     if (filterPokemons.length) {
       document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
-      ender(filterPokemons);
+      render(filterPokemons);
     } else {
       document.getElementById("p1").innerHTML = `There are no Pokémon found.`
     }
