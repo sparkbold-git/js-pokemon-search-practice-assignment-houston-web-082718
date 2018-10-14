@@ -3,29 +3,10 @@ let pokemons;
 document.addEventListener('DOMContentLoaded', () => {
   // console.log(POKEMON)
   //YOUR CODE HERE
-   fetchInitialPokemon();
-   searchPokemon();
+  fetchInitialPokemon();
+  searchPokemon();
 })
 
-// CSS hover flip
-// const render = (pokemon) => {
-//   let container = document.getElementById('pokemon-container')
-//   container.innerHTML +=
-//     `<div class="flip-card" id="${pokemon.id}">
-//       <div class="flip-card-inner">
-//         <div class="flip-card-front">
-//           <h2>${pokemon.name}</h2>
-//           <img src="${pokemon.sprites.front}" />
-//         </div>
-//         <div class="flip-card-back">
-//           <h4>${pokemon.abilities}</h4>
-//           <img src="${pokemon.sprites.back}" />
-//         </div>
-//       </div>
-//     </div>`
-// }
-
-// onClick flip
 const render = (pokemon) => {
   let container = document.getElementById('pokemon-container')
   container.innerHTML +=
@@ -67,12 +48,16 @@ const flipFunc = (id) => {
 
 const searchPokemon = () => {
   document.getElementById('pokemon-search-form').addEventListener('input', event => {
-    const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(event.target.value.toLowerCase()));
+    let keyword = event.target.value.toLowerCase();
+    const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(keyword));
+    let container = document.getElementById('pokemon-container');
     if (filterPokemons.length) {
-      document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
-      render(filterPokemons);
+      document.getElementById("p1").innerHTML = `There are <strong>${filterPokemons.length}</strong> Pokémon here`;
+      container.innerHTML = "";
+      filterPokemons.forEach(pokemon => render(pokemon))
     } else {
       document.getElementById("p1").innerHTML = `There are no Pokémon found.`
+      container.innerHTML = ""
     }
   })
 }
