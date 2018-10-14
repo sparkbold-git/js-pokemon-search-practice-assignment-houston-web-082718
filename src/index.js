@@ -28,7 +28,7 @@ const fetchInitialPokemon = () => {
   fetch('db.json')
     .then(resp => resp.json())
     .then(data => {
-      pokemons = data.pokemon;
+      pokemons = data.pokemon;// json return a hash with key pokemon from json file instead of array! remove this line and change data to pokemons with api from http://localhost:3000/pokemon/
       document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
       pokemons.forEach(pokemon => {
         render(pokemon);
@@ -52,7 +52,7 @@ const searchPokemon = () => {
     const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(keyword));
     let container = document.getElementById('pokemon-container');
     if (filterPokemons.length) {
-      document.getElementById("p1").innerHTML = `There are <strong>${filterPokemons.length}</strong> Pokémon here`;
+      document.getElementById("p1").innerHTML = `There are <strong>${filterPokemons.length}</strong> Pokémon here with keyword <em>'${keyword}'</em>'`;
       container.innerHTML = "";
       filterPokemons.forEach(pokemon => render(pokemon))
     } else {
