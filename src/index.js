@@ -68,6 +68,11 @@ const flipFunc = (id) => {
 const searchPokemon = () => {
   document.getElementById('pokemon-search-form').addEventListener('input', event => {
     const filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(event.target.value.toLowerCase()));
-    render(filterPokemons);
+    if (filterPokemons.length) {
+      document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
+      ender(filterPokemons);
+    } else {
+      document.getElementById("p1").innerHTML = `There are no Pokémon found.`
+    }
   })
 }
