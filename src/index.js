@@ -56,7 +56,7 @@ const searchPokemon = () => {
       container.innerHTML = "";
       filterPokemons.forEach(pokemon => render(pokemon))
     } else {
-      document.getElementById("p1").innerHTML = `There are no Pokémon found.`
+      document.getElementById("p1").innerHTML = `There are no Pokémon to be found with keyword <em>'${keyword}'</em>'.`
       container.innerHTML = ""
     }
   })
