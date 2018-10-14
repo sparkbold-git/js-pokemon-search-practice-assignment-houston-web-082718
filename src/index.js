@@ -47,7 +47,7 @@ const fetchInitialPokemon = () => {
   fetch('db.json')
     .then(resp => resp.json())
     .then(data => {
-      pokemons = data[pokemon];
+      pokemons = data.pokemon;
       // document.getElementById("p1").innerHTML = `There are <strong>${pokemons.length}</strong> Pokémon here`;
       // pokemons.forEach(pokemon => {
       //   render(pokemon);
